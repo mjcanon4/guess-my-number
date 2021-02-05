@@ -35,7 +35,6 @@ document.querySelector(".check").addEventListener("click", function () {
 
     if (score > highScore) {
       document.querySelector(".highscore").textContent = score;
-      highScore = score;
     } else {
       document.querySelector(".highscore").textContent = highScore;
     }

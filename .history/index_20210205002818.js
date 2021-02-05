@@ -34,10 +34,9 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector(".number").textContent = number;
 
     if (score > highScore) {
-      document.querySelector(".highscore").textContent = score;
-      highScore = score;
+      document.querySelector(".highScore").textContent = score;
     } else {
-      document.querySelector(".highscore").textContent = highScore;
+      document.querySelector(".highScore").textContent = highScore;
     }
   } else if (guess > number) {
     if (score > 1) {

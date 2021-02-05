@@ -1,7 +1,7 @@
 "use strict";
 
 //Here we are creating the secret number
-let number = Math.trunc(Math.random() * 20) + 1;
+const number = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highScore = 0;
 
@@ -29,16 +29,10 @@ document.querySelector(".check").addEventListener("click", function () {
       "I need a number to check...";
   } else if (guess === number) {
     document.querySelector(".message").textContent = "Congrats! 🥳";
+    document.querySelector(".highscore").textContent = score;
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").style.width = "30rem";
     document.querySelector(".number").textContent = number;
-
-    if (score > highScore) {
-      document.querySelector(".highscore").textContent = score;
-      highScore = score;
-    } else {
-      document.querySelector(".highscore").textContent = highScore;
-    }
   } else if (guess > number) {
     if (score > 1) {
       document.querySelector(".message").textContent = "⏬ Too high...";

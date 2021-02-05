@@ -33,9 +33,9 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector(".number").style.width = "30rem";
     document.querySelector(".number").textContent = number;
 
-    if (score > highScore) {
+    if (score === 0) {
+    } else if (score > highScore) {
       document.querySelector(".highscore").textContent = score;
-      highScore = score;
     } else {
       document.querySelector(".highscore").textContent = highScore;
     }

@@ -3,7 +3,7 @@
 //Here we are creating the secret number
 let number = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
-let highScore = 0;
+let highScore = score;
 
 // Resetting the game via the Again button
 document.querySelector(".again").addEventListener("click", function () {
@@ -34,10 +34,9 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector(".number").textContent = number;
 
     if (score > highScore) {
-      document.querySelector(".highscore").textContent = score;
-      highScore = score;
+      document.querySelector(".highScore").textContent = score;
     } else {
-      document.querySelector(".highscore").textContent = highScore;
+      document.querySelector(".highScore").textContent = highScore;
     }
   } else if (guess > number) {
     if (score > 1) {

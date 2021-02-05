@@ -32,13 +32,9 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").style.width = "30rem";
     document.querySelector(".number").textContent = number;
-
-    if (score > highScore) {
-      document.querySelector(".highscore").textContent = score;
-      highScore = score;
-    } else {
-      document.querySelector(".highscore").textContent = highScore;
-    }
+    // if (score > highScore) {
+    //   document.querySelector(".highscore").textContent = score;
+    // }
   } else if (guess > number) {
     if (score > 1) {
       document.querySelector(".message").textContent = "⏬ Too high...";
